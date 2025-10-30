@@ -1,0 +1,22 @@
+{
+  "name": "software-architecture-second-workshop",
+  "version": "1.0.0",
+  "description": "Second workshop for the software architecure course taught by Daniel Corea, 2025-2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeronimo1303/Software-Architecture-Second-Workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeronimo1303/Software-Architecture-Second-Workshop/issues"
+  },
+  "homepage": "https://github.com/Jeronimo1303/Software-Architecture-Second-Workshop#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
