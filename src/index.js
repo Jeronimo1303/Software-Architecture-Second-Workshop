@@ -1,10 +1,9 @@
 const express = require('express')
 const Pokenea = require('./pokenea.js')
-const { pokenea_phrases } = require('./constants.js')
 const os = require('os')
 const path = require('path')
 const app = express()
-const port = 3000
+const port = 80
 const number_of_pokeneas = 8
 const pokeneas = Pokenea.createPokeneas(number_of_pokeneas)
 
@@ -49,5 +48,5 @@ app.get('/random', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Pokenea app listening on port ${port}`)
 })
