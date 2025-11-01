@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokenea Viewer</title>
-    <link rel="stylesheet" href="static.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokenea Viewer</title>
+  <link rel="stylesheet" href="static.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Pokenea Explorer</h1>
-        <div class="button-container">
-            <button onclick="getRandomPokenea()">Get Random Pokenea</button>
-        </div>
-        <div id="output">
-            <h2 id="pokenea-name">Click a button to fetch data from the server...</h2>
-            <p><strong>ID:</strong> <span id="pokenea-id"></span></p>
-            <p><strong>Ability:</strong> <span id="pokenea-ability"></span></p>
-            <p><strong>Phrase:</strong> <span id="pokenea-phrase"></span></p>
-            <p><strong>Container ID:</strong> <span id="container-id"></span></p>
-        </div>
+  <div class="container">
+    <h1>Pokenea Explorer</h1>
+    <div class="button-container">
+      <button onclick="getRandomPokenea()">Get Random Pokenea</button>
+      <button onclick="getPokeneaImage()">Get Random Image</button>
     </div>
 
-    <script src="client.js"></script>
+    <div id="output">
+      <!-- Pokenea data section -->
+      <div id="pokenea-section" style="display: none;">
+        <h2 id="pokenea-name"></h2>
+        <p><strong>ID:</strong> <span id="pokenea-id"></span></p>
+        <p><strong>Ability:</strong> <span id="pokenea-ability"></span></p>
+        <p><strong>Phrase:</strong> <span id="pokenea-phrase"></span></p>
+        <p><strong>Container ID:</strong> <span id="container-id"></span></p>
+      </div>
+
+      <!-- Image section -->
+      <div id="image-section" style="display: none;">
+        <h2>Pokenea Image</h2>
+        <img id="pokenea-image" src="" alt="Pokenea Image" style="max-width: 300px; display: block; margin-top: 10px;">
+        <p><strong>Phrase:</strong> <span id="image-phrase"></span></p>
+        <p><strong>Container ID:</strong> <span id="image-container-id"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const { pokenea_phrases, pokenea_names, pokenea_abilities } = require('./constants.js');
+const { pokenea_phrases, pokenea_names, pokenea_abilities, pokenea_image_paths, } = require('./constants.js');
 
 class Pokenea {
 
@@ -27,8 +27,7 @@ class Pokenea {
             const ability = pokenea_abilities[number];
             const phrase = pokenea_phrases[number];
             const height = number;
-
-            const image_path = '';
+            const image_path = pokenea_image_paths[number];
 
             pokeneas.push(new Pokenea(name, height, ability, image_path, phrase));
         }

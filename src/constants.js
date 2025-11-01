@@ -40,8 +40,24 @@ const pokenea_abilities = [
     "Envelops itself in a shimmering aura of speed, making its movements nearly invisible and doubling its reaction time for a short burst"
 ]
 
+const pokenea_image_paths =[
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/Shivam.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/bulbazur.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/charmande.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/fatfuck.jpeg",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/idk.jpeg",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/jolteon.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/meowth.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/nidosomething.webp",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/sam.jpg",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/someWierdGuy.png",
+    "https://storage.googleapis.com/second-workshop-bucket/Pokeneas/squirtle.jpg",
+]
+
+
 module.exports = {
     pokenea_phrases,
     pokenea_names,
     pokenea_abilities,
+    pokenea_image_paths,
 }
