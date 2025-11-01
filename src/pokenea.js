@@ -1,11 +1,9 @@
 const { pokenea_phrases, pokenea_names, pokenea_abilities } = require('./constants.js');
 
 class Pokenea {
-    // simple numeric id counter
-    static nextId = 1;
 
     constructor(name, height, ability, image, phrase) {
-        this.id = Pokenea.nextId++;
+        this.id = crypto.randomUUID();
         this.name = name;
         this.height = height;
         this.ability = ability;
@@ -16,7 +14,6 @@ class Pokenea {
     static createPokeneas(amount) {
         const pokeneas = [];
 
-        // guard: ensure arrays exist and have the same length
         const poolSize = Math.min(
             pokenea_names.length,
             pokenea_abilities.length,
