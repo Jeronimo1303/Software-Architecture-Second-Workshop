@@ -45,8 +45,6 @@ app.get('/random', (req, res) => {
     res.send(body)
 })
 
-
-
 app.listen(port, () => {
     console.log(`Pokenea app listening on port ${port}`)
 })
