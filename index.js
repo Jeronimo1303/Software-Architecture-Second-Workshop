@@ -1,5 +1,5 @@
 const express = require('express')
-const Pokenea = require('./pokenea.js')
+const Pokenea = require('./src/pokenea.js')
 const os = require('os')
 const path = require('path')
 const app = express()
@@ -8,10 +8,10 @@ const number_of_pokeneas = 8
 const pokeneas = Pokenea.createPokeneas(number_of_pokeneas)
 
 // Serve static files from public directory
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(path.join(__dirname, './public')))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 app.get('/image', (req, res) => {
