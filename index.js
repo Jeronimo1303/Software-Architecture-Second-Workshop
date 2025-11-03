@@ -17,13 +17,12 @@ app.get('/', (req, res) => {
 app.get('/image', (req, res) => {
     const container_id = os.hostname()
     const random_index = Math.floor(Math.random() * pokeneas.length)
-    const random_pokena = pokeneas[random_index]
+    const body = {}
 
-    const body = {
-        image: random_pokena.image,
-        phrase: random_pokena.phrase,
-        container_id: container_id
-    }
+    const random_pokena = pokeneas[random_index]
+    body["image"] = random_pokena.image
+    body["phrase"] = random_pokena.phrase
+    body["container_id"] = container_id
 
     res.send(body)
 })
@@ -31,16 +30,15 @@ app.get('/image', (req, res) => {
 app.get('/random', (req, res) => {
     const container_id = os.hostname()
     const random_index = Math.floor(Math.random() * pokeneas.length)
+    const body = {}
 
     const random_pokena = pokeneas[random_index]
-
-    const body = {
-        id: random_pokena.id,
-        name: random_pokena.name,
-        ability: random_pokena.ability,
-        phrase: random_pokena.phrase,
-        container_id: container_id
-    }
+    body["id"] = random_pokena.id
+    body["name"] = random_pokena.name
+    body["ability"] = random_pokena.ability
+    body["height"] = random_pokena.height
+    body["phrase"] = random_pokena.phrase
+    body["container_id"] = container_id
 
     res.send(body)
 })

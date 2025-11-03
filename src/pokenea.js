@@ -26,10 +26,10 @@ class Pokenea {
             const name = pokenea_names[number];
             const ability = pokenea_abilities[number];
             const phrase = pokenea_phrases[number];
-            const height = number;
-            const image_path = pokenea_image_paths[number];
+            const height =  `${number} Meters`;
+            const image = pokenea_image_paths[number];
 
-            pokeneas.push(new Pokenea(name, height, ability, image_path, phrase));
+            pokeneas.push(new Pokenea(name, height, ability, image, phrase));
         }
 
         return pokeneas;

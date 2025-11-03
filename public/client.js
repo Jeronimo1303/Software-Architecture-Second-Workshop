@@ -13,6 +13,7 @@ async function getRandomPokenea() {
     document.getElementById('pokenea-name').textContent = data.name;
     document.getElementById('pokenea-id').textContent = data.id;
     document.getElementById('pokenea-ability').textContent = data.ability;
+    document.getElementById('pokenea-height').textContent = data.height;
     document.getElementById('pokenea-phrase').textContent = data.phrase;
     document.getElementById('container-id').textContent = data.container_id;
 
