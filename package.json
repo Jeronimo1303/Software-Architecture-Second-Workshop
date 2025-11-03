@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Jeronimo1303/Software-Architecture-Second-Workshop#readme",
   "dependencies": {
     "@google-cloud/storage": "^7.17.2",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
   }
 }

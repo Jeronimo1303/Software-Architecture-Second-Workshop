@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h2= title
+  if pokenea
+    img.uniform-size(src=pokenea.data.image)
+    p Phrase: #{pokenea.data.phrase}
+
+    p Container Id: #{pokenea.meta.container_id}
+  else
+    p No Pokenea data available.

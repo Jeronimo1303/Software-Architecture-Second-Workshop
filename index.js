@@ -1,48 +1,24 @@
-const express = require('express')
-const Pokenea = require('./src/pokenea.js')
-const os = require('os')
-const path = require('path')
-const app = express()
-const port = 80
-const number_of_pokeneas = 8
-const pokeneas = Pokenea.createPokeneas(number_of_pokeneas)
+const express = require('express');
+const getRandomPokenea = require('./src/utils.js');
+const path = require('path');
+const app = express();
+const port = 80;
 
 // Serve static files from public directory
-app.use(express.static(path.join(__dirname, './public')))
+app.use(express.static(path.join(__dirname, './public')));
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'))
-})
-
-app.get('/image', (req, res) => {
-    const container_id = os.hostname()
-    const random_index = Math.floor(Math.random() * pokeneas.length)
-    const body = {}
-
-    const random_pokena = pokeneas[random_index]
-    body["image"] = random_pokena.image
-    body["phrase"] = random_pokena.phrase
-    body["container_id"] = container_id
-
-    res.send(body)
-})
+  res.render('layout', { title: 'Pokenea Viewer' });
+});
 
 app.get('/random', (req, res) => {
-    const container_id = os.hostname()
-    const random_index = Math.floor(Math.random() * pokeneas.length)
-    const body = {}
+  res.render('random', { title: 'Random Pokenea', pokenea : getRandomPokenea() });
+});
 
-    const random_pokena = pokeneas[random_index]
-    body["id"] = random_pokena.id
-    body["name"] = random_pokena.name
-    body["ability"] = random_pokena.ability
-    body["height"] = random_pokena.height
-    body["phrase"] = random_pokena.phrase
-    body["container_id"] = container_id
+app.get('/image', (req, res) => {
+  res.render('image', { title: 'Pokenea Image', pokenea : getRandomPokenea() });
+});
 
-    res.send(body)
-})
-
-app.listen(port, () => {
-    console.log(`Pokenea app listening on port ${port}`)
-})
+app.listen(port, () => console.log(`Server running on port ${port}`));

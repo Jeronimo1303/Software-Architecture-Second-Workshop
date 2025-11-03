@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2= title
+  if pokenea
+    p Pokenea ID: #{pokenea.data.id}
+    p Name: #{pokenea.data.name}
+    p Ability: #{pokenea.data.ability}
+    p Height: #{pokenea.data.height}
+    p Phrase: #{pokenea.data.phrase}
+
+    p Container Id: #{pokenea.meta.container_id}
+  else
+    p No Pokenea data available.

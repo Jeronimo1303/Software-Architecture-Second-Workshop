@@ -17,7 +17,8 @@ class Pokenea {
         const poolSize = Math.min(
             pokenea_names.length,
             pokenea_abilities.length,
-            pokenea_phrases.length
+            pokenea_phrases.length,
+            pokenea_image_paths.length,
         );
 
         for (let i = 0; i < amount; i++) {

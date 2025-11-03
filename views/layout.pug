@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/static.css")
+  body
+    .container
+      header
+        h1= title
+        nav.nav-container
+          a(href="/", class="nav-link") Home
+          a(href="/random", class="nav-link") Random Pokenea
+          a(href="/image", class="nav-link") Random Image
+      main
+        block content
